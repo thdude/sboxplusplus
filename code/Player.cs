@@ -195,6 +195,8 @@ partial class SandboxPlayer : Player
 	{
 		if ( timeSinceDropped < 1 ) return;
 
+		Log.Info(other);
+
 		base.StartTouch( other );
 	}
 
