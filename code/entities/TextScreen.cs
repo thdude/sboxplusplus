@@ -9,12 +9,11 @@ public partial class TextScreen : Prop
 	{
 		base.Spawn();
 
-        Entity.Create("info_target");
-
 		SetModel( "models/torch/torch.vmdl" );
 		SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 
         //var worldtext = Entity.Create("point_worldtext");
-        ConsoleSystem.Run("ent_create", "point_worldtext", "message", "cock");
+        ConsoleSystem.Run("ent_create point_worldtext");
+        ConsoleSystem.Run("ent_fire", "point_worldtext", "SetMessage", "cock");
 	}
 }
